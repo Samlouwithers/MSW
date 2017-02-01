@@ -1,0 +1,489 @@
+/*
+  HTML5 Reset :: style.css
+  ----------------------------------------------------------
+  We have learned much from/been inspired by/taken code where offered from:
+
+  Eric Meyer          :: http://meyerweb.com
+  HTML5 Doctor        :: http://html5doctor.com
+  and the HTML5 Boilerplate :: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+  max-width: 100%; }
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+  In fact, it *will* cause problems with Google Maps' controls at small size.
+  If this is the case for you, try uncommenting the following:
+
+#map img {
+    max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted.
+  you'll have to restore the bullets within content,
+  which is fine because they're probably customized anyway */
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+/* Mixins
+-------------------------------------------------------------------------------*/
+/*@font-face {
+  font-family: 'ChunkFive';
+  src: url('../fonts/ChunkFive/Chunkfive-webfont.eot');
+  src: url('../fonts/ChunkFive/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ChunkFive/Chunkfive-webfont.woff') format('woff'),
+       url('../fonts/ChunkFive/Chunkfive-webfont.ttf') format('truetype'),
+       url('../fonts/ChunkFive/Chunkfive-webfont.svg#webfont90E2uSjN') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}*/
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {
+  /*background: #F5F5F5;*/
+  background: white;
+  font: 13px Helmet, Freesans, sans-serif; }
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+/* We like off-black for text. */
+body, select, input, textarea {
+  color: #333; }
+
+a {
+  color: #03f; }
+
+a:hover {
+  color: #69f; }
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+/*  j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #fcd700; }
+
+ins {
+  background-color: #fcd700;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #fcd700;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Mozilla dosen't style placeholders by default */
+input:-moz-placeholder {
+  color: #a9a9a9; }
+
+textarea:-moz-placeholder {
+  color: #a9a9a9; }
+
+/* let's give blockquotes *some* default styling, because unstyled blockquotes are dangerous */
+blockquote {
+  padding: 16px;
+  background: #eee; }
+
+header,
+section.content {
+  min-height: 100vh;
+  padding: 85px 0 20px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playball', cursive; }
+
+/* Main navigation
+-------------------------------------------------------------------------------*/
+nav {
+  background: #fff;
+  border-bottom: 1px solid #999;
+  border-top: 5px solid #333;
+  height: 65px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999; }
+  nav ul {
+    width: 100%; }
+    nav ul li {
+      float: left; }
+      nav ul li a {
+        border-bottom: 1px solid #999;
+        color: #666;
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: center;
+        text-decoration: none;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+      nav ul li a:hover {
+        background-color: #FCC6C3;
+        border-color: #FF5252;
+        color: #FF5252; }
+    nav ul li.title {
+      margin-right: 10%; }
+      nav ul li.title a {
+        font-family: 'Playball', cursive;
+        font-size: 30px;
+        text-align: left; }
+      nav ul li.title a:hover {
+        /*background-color: #f5f5f5;
+        border-color: #000;
+        color: #333;*/
+        background-color: #fff;
+        border-color: #999;
+        color: #000; }
+
+/* Header
+-------------------------------------------------------------------------------*/
+header {
+  position: relative; }
+  header .video-overlay {
+    background-color: rgba(245, 245, 245, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    top: 0;
+    z-index: -1; }
+  header .video-container {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    top: 0; }
+    header .video-container video {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -100;
+      background-color: #3d4b55;
+      background-size: cover; }
+  header .wreath {
+    text-align: center; }
+    header .wreath img {
+      max-height: 80vh; }
+
+/* Sub-sections
+-------------------------------------------------------------------------------*/
+#event_info {
+  background: #FFDFD4;
+  color: #fff; }
+
+#story h1,
+#event_info h1,
+#wedding_party h1 {
+  font-size: 42px; }
+
+/* Wedding Party
+-------------------------------------------------------------------------------*/
+#wedding_party {
+  background-color: #d7dce0; }
+  #wedding_party .wrapper {
+    position: relative; }
+  #wedding_party h1 {
+    text-align: center;
+    margin: 20px 0; }
+  #wedding_party ul {
+    text-align: center; }
+    #wedding_party ul li {
+      display: inline-block;
+      text-align: left;
+      position: relative;
+      width: 150px;
+      height: 86.60px;
+      background-color: #64C7CC;
+      margin: 43.30px 0;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; }
+      #wedding_party ul li:before, #wedding_party ul li:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 75px solid transparent;
+        border-right: 75px solid transparent; }
+      #wedding_party ul li:before {
+        bottom: 100%;
+        border-bottom: 43.30px solid #64C7CC; }
+      #wedding_party ul li:after {
+        top: 100%;
+        width: 0;
+        border-top: 43.30px solid #64C7CC; }
+      #wedding_party ul li.laura:hover {
+        background-image: url("../img/work_list_2.png");
+        background-size: 100%; }
+    #wedding_party ul.second {
+      margin-left: 0px;
+      margin-top: -43px; }
+    #wedding_party ul.third {
+      margin-left: 0px;
+      margin-top: -43px; }
+    #wedding_party ul.fourth {
+      margin-left: 87px;
+      margin-top: -43px; }
+    #wedding_party ul:last-child {
+      margin-top: -43px; }
+  #wedding_party .hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+    cursor: pointer;
+    width: 150px;
+    height: 400px;
+    margin: -80px 0 0 20px; }
+  #wedding_party .hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+  #wedding_party .hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(http://placekitten.com/240/240);
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+  #wedding_party .hexagon-in2:hover {
+    background-image: url(http://placekitten.com/241/241); }
+  #wedding_party .outside {
+    visibility: hidden;
+    overflow: hidden;
+    width: 150px;
+    height: 400px;
+    background-color: blue;
+    margin: -80px 0 0 20px;
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg); }
+    #wedding_party .outside .one {
+      visibility: hidden;
+      overflow: hidden;
+      background-color: green;
+      width: 100%;
+      height: 100%;
+      -moz-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      -webkit-transform: rotate(-60deg);
+      transform: rotate(-60deg); }
+    #wedding_party .outside .two {
+      width: 100%;
+      height: 100%;
+      visibility: visible;
+      overflow: hidden;
+      background-color: red;
+      -moz-transform: rotate(-60deg);
+      -o-transform: rotate(-60deg);
+      -webkit-transform: rotate(-60deg);
+      transform: rotate(-60deg); }
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 980px; } }
+
+/* Print styles
+-------------------------------------------------------------------------------*/
