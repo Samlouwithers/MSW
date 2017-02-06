@@ -25,8 +25,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link href="https://fonts.googleapis.com/css?family=Patua+One|Raleway:300,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato|Playball" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
+
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 	<script src="assets/js/libs/modernizr-3.3.1.min.js"></script>
@@ -55,11 +55,17 @@
 		<div class="wrapper">
 		
 			<ul>
-				<li class="title"><a href="index">MSW</a></li>
+				<li class="title"><a href="index">MSW Financial Partners</a></li>
 				<li><a href="story">Our Mission</a></li>
 				<li><a href="event_info">Services</a></li>
 				<li><a href="wedding_party">People</a></li>
 				<li><a href="contact">Contact Us</a></li>
+				<li class="social">
+					<a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+				</li>
+				<li class="social">
+					<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></i></a>
+				</li>
 			</ul>
 
 		</div>
@@ -78,9 +84,17 @@
 				<source src="/assets/videos/Meeting-Room.ogv" type="video/ogv">
 			</video>
 		</div>
-		<div class="wreath">
-			<img src="/assets/img/untitled-1.png" alt="wreath">
+		<div class="cover-text clearfix">
+			<!-- <img src="/assets/img/untitled-1.png" alt="wreath">-->
+			<h1>Welcome to our faces!</h1>
+			<p>Here's some descriptive text! Bacon ipsum dolor amet tongue pig jowl shoulder alcatra tail beef turkey sirloin short ribs shank ground round turducken bresaola. Meatball venison turkey flank ribeye prosciutto tenderloin ham shank swine hamburger turducken.</p>
+			<ul>
+				<li><a href="#" class="button">Ohhh Yeah funds</a></li>
+				<li><a href="#" class="button">but really money honey</a></li>
+			</ul>
 		</div>
+		<div class="whatWedo">
+		<div>
 	</header>
 
 
@@ -88,18 +102,49 @@
 
 		<div class="wrapper">
 
-			<h1>Our Story</h1>
-
+			<h1>Our Mission</h1>
+			<p>Bacon ipsum dolor amet tongue pig jowl shoulder alcatra tail beef turkey sirloin short ribs shank ground round turducken bresaola. Meatball venison turkey flank ribeye prosciutto tenderloin ham shank swine hamburger turducken. Capicola ribeye strip steak tri-tip pork belly alcatra corned beef. Tongue venison t-bone picanha jowl pig pork corned beef turkey chicken beef pancetta ground round kevin tenderloin. Strip steak brisket beef fatback, meatball capicola pork loin jowl spare ribs turkey rump burgdoggen tail shoulder doner.
+			</p>
+			<p>Bacon ipsum dolor amet tongue pig jowl shoulder alcatra tail venison turkey flank ribeye prosciutto tenderloin ham shank swine hamburger turducken. Capicola ribeye strip steak tri-tip pork belly alcatra corned beef. Tongue venison t-bone picanha jowl pig pork corned beef turkey chicken beef pancetta ground round kevin tenderloin. Strip steak brisket beef fatback, meatball capicola pork loin jowl spare ribs turkey rump burgdoggen tail shoulder doner.
+			</p>
 		</div>
 
 	</section>
 
 
-	<section id="event_info" class="content">
+	<section id="services" class="content">
 
 		<div class="wrapper">
 
-			<h1>Event Information</h1>
+			<h1>What we do</h1>
+			<div class="clearfix">
+				<div class="service_box">
+					<h2>Personal Finance</h2>
+					<ul>
+						<li>We're so smart we help people wrange dinosaurs and they pay money and its great.</li>
+						<li>yay dinosaurs</li>
+						<li>funds</li>
+					</ul>
+				</div>
+				<div class="service_box">
+					<h2>Business Finances</h2>
+					<ul>
+						<li>We're so smart</li>
+						<li>yay dinosaurs</li>
+						<li>We're so smart</li>
+						<li>yay dinosaurs</li>
+						<li>funds</li>
+					</ul>
+				</div>
+				<div class="service_box">
+					<h2>Instructional Stuff</h2>
+					<ul>
+						<li>We're so smart</li>
+						<li>yay dinosaurs</li>
+						<li>funds</li>
+					</ul>
+				</div>
+			</div>
 
 		</div>
 
@@ -109,41 +154,38 @@
 	<section id="wedding_party" class="content">
 
 		<div class="wrapper">
-			<h1>Wedding Party</h1>
-			<ul>
-				<li class="laura"></li>
-				<li><div class=""></div></li>
-				<li><div class=""></div></li>
-			</ul>
-			<ul class="second">
-				<li><div class=""></li>
-				<li><div class=""></li>
-				<li><div class=""></li>
-				<li><div class=""></li>
-			</ul>
-			<ul class="third">
-				<li><div class=""></li>
-				<li><div class=""></li>
-				<li><div class=""></li>
-				<li><div class=""></li>
-				<li><div class=""></li>
-			</ul>
-			<ul class="second">
-				<li><div class=""></div></li>
-				<li><div class=""></div></li>
-				<li><div class=""></div></li>
-				<li><div class=""></div></li>
-			</ul>
-			<ul>
-				<li class="outside"><div class="one"><div class="two"></div></div></li>
-				<li class="outside"><div class="one"><div class="two"></div></div></li>
-				<li class="outside"><div class="one"><div class="two"></div></div></li>
-			</ul>
+			<h1>Who We Are</h1>
+			<p>This is where I envision a rolling slideshow of the people and their expertise including their links and bios</p>
 
 
-			<div class="hexagon hexagon2"><div class="hexagon-in1"><div class="hexagon-in2"></div></div></div>
 
-			<div class="outside"><div class="one"><div class="two"></div></div></div>
+			<div class="w3-content w3-display-container" style="max-width:900px;">
+<a class="w3-btn-floating noselection w3-display-left w3-hover-dark-grey" onclick="plusDivs(-1)">❮</a>
+<a class="w3-btn-floating noselection w3-display-right w3-hover-dark-grey" onclick="plusDivs(+1)">❯</a>
+
+  <!-- Slideshow -->
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: block;">
+    <img src="/assets/img/work_list_1.png" style="width:100%">
+    <div class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Caption text</span>
+    </div>
+  </div>
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+    <img src="/assets/img/work_list_2.png" style="width:100%">
+    <div class="w3-display-topleft w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Laura Millar!<br/>Here's some cool text about how awesome laura millar is!</span>
+    </div>
+  </div>
+  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+    <img src="/assets/img/work_list_3.png" style="width:100%">
+    <div class="w3-display-topright w3-text-white w3-container w3-padding-32 w3-hide-small">
+      <span class="w3-white w3-padding-large">Caption text</span>
+    </div>
+  </div>
+</div>
+
+
+
 
 		</div>
 

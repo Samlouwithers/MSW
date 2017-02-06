@@ -1,5 +1,15 @@
+@import 'inc/variables';
 @import 'inc/reset';
 @import 'inc/mixins';
+@import "../../node_modules/font-awesome/css/font-awesome";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('.../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*@font-face {
   font-family: 'ChunkFive';
@@ -16,8 +26,8 @@
 body {
   /*background: #F5F5F5;*/
   background: white;
-  font: 13px Helmet, Freesans, sans-serif;
-  //padding: 65px 0 0;
+  font: $base-font;
+  line-height: 1.25em;
 }
 
 /* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
@@ -45,10 +55,13 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 /* let's give blockquotes *some* default styling, because unstyled blockquotes are dangerous */
 blockquote {padding: 16px; background: #eee;}
 
-header,
+header {
+  //min-height: 100vh;
+  padding: 85px 0 0;
+}
+
 section.content {
-  min-height: 100vh;
-  padding: 85px 0 20px;
+  padding: 50px 0 80px; 
 }
 
 h1,
@@ -56,17 +69,80 @@ h2,
 h3,
 h4,
 h5,
-h6 { font-family: 'Playball', cursive; }
+h6 { 
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  font-weight:bold;
+}
 
+h1 { 
+  font-size: $h1;
+  line-height: $h1*.5;
+}
+h2 { 
+  font-size: $h2;
+  line-height: 2em;
+}
+h3 { 
+  font-size: $h3;
+  line-height: $h3;
+}
+//h4 { font: $h4; }
+//h5 { font: $h5; }
+//h6 { font: $h6; }
+
+p { 
+  font-size: $p;
+  font-family: $font-copy;
+  color: $dark-grey;
+  line-height: $h3;
+  padding: 0 0 20px;
+}
+
+li {
+  font-size: $p;
+  font-family: $font-copy;
+  line-height: $h3;
+}
+
+/* Buttons
+-------------------------------------------------------------------------------*/
+a.button {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: $h3;
+  font-family: $font-title;
+  font-weight: bold;
+  @include transition(all,0.2s,ease);
+
+  &:hover {
+    background-color: $hover-green;
+    border: 1px solid $primary;
+    color: #ffffff;
+  }
+}
+
+/* clearfix
+-------------------------------------------------------------------------------*/
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear:both;
+}
 
 
 /* Main navigation
 -------------------------------------------------------------------------------*/
 nav {
-  background: #fff;
-  border-bottom: 1px solid #999;
-  border-top: 5px solid #333;
-  height: 65px;
+  background: $stressed-linen;
+  border-bottom: 1px solid black;
+  border-top: 5px solid $primary;
   left: 0;
   position: fixed;
   right: 0;
@@ -80,14 +156,12 @@ nav {
       float: left;
 
       a {
-        border-bottom: 1px solid #999;
-        color: #666;
+        border-bottom: 1px solid black;
+        color: $light-grey;
         display: block;
-        font-family: 'Raleway', sans-serif;
+        font-family: $font-copy;
         font-size: 18px;
-        font-weight: 300;
-        height: 60px;
-        line-height: 60px;
+        line-height: 99px;
         padding: 0 20px; 
         text-align: center;
         text-decoration: none;
@@ -95,9 +169,9 @@ nav {
       }
 
       a:hover {
-        background-color: #FCC6C3;
-        border-color: #FF5252;
-        color: #FF5252;        
+        background-color: $hover-green;
+        border-color: $primary;
+        color: white;        
       }
     }
 
@@ -105,19 +179,25 @@ nav {
       margin-right: 10%;
 
       a {
-        font-family: 'Playball', cursive;
+        font-family: $font-title;
+        font-weight: bold;
         font-size: 30px;
         text-align: left;
       }
-      a:hover {
-        /*background-color: #f5f5f5;
-        border-color: #000;
-        color: #333;*/
-        background-color: #fff;
-        border-color: #999;
-        color: #000;
-      }
 
+    }
+
+    li.social {
+      a {
+        font-size: 30px;
+        padding: 0 5px;
+         @include transition(all,0.2s,ease);
+
+         &:hover {
+          color: $hover-green;
+          background-color: inherit;
+         }
+      }
     }
 
   }
@@ -132,10 +212,10 @@ header {
   position: relative;
   
   .video-overlay {
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(204, 211, 208, 0.6);
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 720px;
     display: block;
     overflow: hidden;
     top: 0;
@@ -146,7 +226,7 @@ header {
     position: absolute;
     z-index: -5;
     width: 100%;
-    height: 100vh;
+    height: 720px;
     display: block;
     overflow: hidden;
     top: 0;
@@ -164,11 +244,35 @@ header {
     }
   }
 
-  .wreath {
+  .cover-text {
     text-align: center;
-    img {
-      max-height: 80vh;
+    margin: 140px auto;
+    width: 70%;
+    color: black;
+    h1 {
+      display: block;
+      line-height: 1.6em;
     }
+    h3 { 
+      line-height: 1.2em;
+    }
+    ul {
+      text-align: center;
+      line-height: 8em;
+    }
+    ul li {
+      display: inline-block;
+    }
+    a.button {
+      margin: 0 5px 0;
+    }
+  }
+
+  &:after {
+    content: "";
+    display:block;
+    height: 100px;
+    background: $stressed-linen;
   }
 
 }
@@ -177,150 +281,41 @@ header {
 /* Sub-sections
 -------------------------------------------------------------------------------*/
 
-#event_info {
-  background: #FFDFD4;
-  color: #fff;
-}
-
-#story,
-#event_info,
-#wedding_party {
-  h1 {
-    font-size:42px;
-  }
-}
-
-
-/* Wedding Party
--------------------------------------------------------------------------------*/
-#wedding_party {
-  .wrapper {
-    position: relative;
-  }
-  background-color: #d7dce0;
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-  }
+#services {
+  background: $light-grey;
+  padding-bottom:120px;
   ul {
-    text-align: center;
+    list-style-type: circle;
+    margin: 0 0 0 15px;
     li {
-      display:inline-block;
-      text-align: left;
-      position: relative;
-      width: 150px; 
-      height: 86.60px;
-      background-color: #64C7CC;
-      margin: 43.30px 0;
-      @include transition(all,0.2s,ease-in);
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        width: 0;
-        border-left: 75px solid transparent;
-        border-right: 75px solid transparent;
-      }
-
-      &:before {
-        bottom: 100%;
-        border-bottom: 43.30px solid #64C7CC;
-      }
-
-      &:after {
-        top: 100%;
-        width: 0;
-        border-top: 43.30px solid #64C7CC;
-      }
-      &.laura:hover {
-        background-image: url("../img/work_list_2.png");
-        background-size: 100%;
-      }
-    }
-    &.second {
-      margin-left: 0px;
-      margin-top: -43px;
-    }
-    &.third {
-      margin-left: 0px;
-      margin-top: -43px;
-    }
-    &.fourth {
-      margin-left: 87px;
-      margin-top: -43px;
-    }
-    &:last-child{
-      margin-top:-43px;
-    }
-  }
-
-  .hexagon {
-    overflow: hidden;
-    visibility: hidden;
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    cursor: pointer;
-    width: 150px;
-    height: 400px;
-    margin: -80px 0 0 20px;
-  }
-  .hexagon-in1 {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-      }
-  .hexagon-in2 {
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: 50%;
-      background-image: url(http://placekitten.com/240/240);
-      visibility: visible;
-      -webkit-transform: rotate(-60deg);
-         -moz-transform: rotate(-60deg);
-          -ms-transform: rotate(-60deg);
-           -o-transform: rotate(-60deg);
-              transform: rotate(-60deg);
-      }
-  .hexagon-in2:hover {
-      background-image: url(http://placekitten.com/241/241);
-      }
-
-  .outside {
-    visibility: hidden;
-    overflow: hidden;
-    width: 150px;
-    height: 400px;
-    background-color: blue;
-    margin: -80px 0 0 20px;
-    @include rotate(120);
-    .one {
-      visibility: hidden;
-      overflow: hidden;
-      background-color: green;
-      width:100%;
-      height: 100%;
-      @include rotate(-60);
-    }
-    .two {
-      width:100%;
-      height: 100%;
-      visibility: visible;
-      overflow: hidden;
-      background-color: red;
-      @include rotate(-60);
+      margin: 0 0 15px 0;
+      line-height: 1.1em;
     }
   }
 }
+
+
+
+/* Services
+-------------------------------------------------------------------------------*/
+.service_box {
+  float:left;
+  width: 31%;
+  border: 1px solid $grey;
+  padding: 10px 20px 40px;
+  margin: 0 3% 0 0;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+
+/* People
+-------------------------------------------------------------------------------*/
+
+.w3-animate-opacity{-webkit-animation:opac 0.8s;animation:opac 0.8s}
+@keyframes opac{from{opacity:0} to{opacity:1}}
+
 
 /* Media queries
 -------------------------------------------------------------------------------*/
