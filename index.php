@@ -150,8 +150,48 @@
 
 	</section>
 
+	<section id="learning" class="content clearfix">
+		<div class="wrapper">
+			<h1>Want to learn more?</h1>
+			<p>We have multiple learning resources to browse including blogs, instrucitonal videos, and lessons all written by our associates and partners for your educational use.
+				Please select a category below to explore. </p>
+			<div class="tree">
+				<ul>
+					<li>
+						<a href="#">Financial Planning</a>
+						<ul>
+							<li>
+								<a href="#">Personal Finance</a>
+								<ul>
+									<li>
+										<a href="#">Business</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Savings</a>
+								<ul>
+									<li><a href="#">401k</a></li>
+									<li>
+										<a href="#">Roth</a>
+										<ul>
+											<li><a href="#">Stocks</a></li>
+											<li><a href="#">Bonds</a></li>
+											<li><a href="#">Cost Basis</a></li>
+										</ul>
+									</li>
+									<li><a href="#">401b</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-	<section id="wedding_party" class="content">
+
+	<section id="people" class="content">
 
 		<div class="wrapper">
 			<h1>Who We Are</h1>
@@ -160,29 +200,29 @@
 
 
 			<div class="w3-content w3-display-container" style="max-width:900px;">
-<a class="w3-btn-floating noselection w3-display-left w3-hover-dark-grey" onclick="plusDivs(-1)">❮</a>
-<a class="w3-btn-floating noselection w3-display-right w3-hover-dark-grey" onclick="plusDivs(+1)">❯</a>
+				<a class="w3-btn-floating noselection w3-display-left w3-hover-dark-grey" onclick="plusDivs(-1)">❮</a>
+				<a class="w3-btn-floating noselection w3-display-right w3-hover-dark-grey" onclick="plusDivs(+1)">❯</a>
 
-  <!-- Slideshow -->
-  <div class="w3-display-container mySlides w3-animate-opacity" style="display: block;">
-    <img src="/assets/img/work_list_1.png" style="width:100%">
-    <div class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
-      <span class="w3-white w3-padding-large">Caption text</span>
-    </div>
-  </div>
-  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
-    <img src="/assets/img/work_list_2.png" style="width:100%">
-    <div class="w3-display-topleft w3-text-white w3-container w3-padding-32 w3-hide-small">
-      <span class="w3-white w3-padding-large">Laura Millar!<br/>Here's some cool text about how awesome laura millar is!</span>
-    </div>
-  </div>
-  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
-    <img src="/assets/img/work_list_3.png" style="width:100%">
-    <div class="w3-display-topright w3-text-white w3-container w3-padding-32 w3-hide-small">
-      <span class="w3-white w3-padding-large">Caption text</span>
-    </div>
-  </div>
-</div>
+			  <!-- Slideshow -->
+			  <div class="w3-display-container mySlides w3-animate-opacity" style="display: block;">
+			    <img src="/assets/img/work_list_1.png" style="width:100%">
+			    <div class="w3-display-middle w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large">Caption text</span>
+			    </div>
+			  </div>
+			  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+			    <img src="/assets/img/work_list_2.png" style="width:100%">
+			    <div class="w3-display-topleft w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large">Laura Millar!<br/>Here's some cool text about how awesome laura millar is!</span>
+			    </div>
+			  </div>
+			  <div class="w3-display-container mySlides w3-animate-opacity" style="display: none;">
+			    <img src="/assets/img/work_list_3.png" style="width:100%">
+			    <div class="w3-display-topright w3-text-white w3-container w3-padding-32 w3-hide-small">
+			      <span class="w3-white w3-padding-large">Caption text</span>
+			    </div>
+			  </div>
+			</div>
 
 
 
@@ -191,49 +231,6 @@
 
 	</section>
 
-
-
-
-
-	<section id="new" class="content">
-
-		<div class="tree">
-			<ul>
-				<li>
-					<a href="#">Parent</a>
-					<ul>
-						<li>
-							<a href="#">Child</a>
-							<ul>
-								<li>
-									<a href="#">Grand Child</a>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Child</a>
-							<ul>
-								<li><a href="#">Grand Child</a></li>
-								<li>
-									<a href="#">Grand Child</a>
-									<ul>
-										<li><a href="#">Great Grand Child</a></li>
-										<li><a href="#">Great Grand Child</a></li>
-										<li><a href="#">Great Grand Child</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Grand Child</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-
-
-	
 
 	<footer>
 

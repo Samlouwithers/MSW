@@ -2775,10 +2775,16 @@ header {
 /* Sub-sections
 -------------------------------------------------------------------------------*/
 #services {
-  background: #CCD3D0;
+  background-image: url("../img/bridge_superlight.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   padding-bottom: 120px; }
+  #services h2 {
+    font-size: 31px;
+    padding-bottom: 10px; }
   #services ul {
-    list-style-type: circle;
+    list-style-type: disc;
     margin: 0 0 0 15px; }
     #services ul li {
       margin: 0 0 15px 0;
@@ -2789,14 +2795,18 @@ header {
 .service_box {
   float: left;
   width: 31%;
+  padding: 0px 10px 10px 20px;
   border: 1px solid #576760;
-  padding: 10px 20px 40px;
   margin: 0 3% 0 0; }
   .service_box:last-child {
     margin: 0; }
 
 /* People
 -------------------------------------------------------------------------------*/
+#people {
+  background-color: #48190D;
+  display: none; }
+
 .w3-animate-opacity {
   -webkit-animation: opac 0.8s;
   animation: opac 0.8s; }
@@ -2806,6 +2816,11 @@ header {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+/* footer
+-------------------------------------------------------------------------------*/
+footer {
+  background: #000000 url("../img/stressed_linen.png") repeat; }
 
 /* Media queries
 -------------------------------------------------------------------------------*/
@@ -2817,15 +2832,18 @@ header {
 /*
 TREE
 ------------------------------------------------------------------------------*/
+#learning {
+  padding-bottom: 120px; }
+
 .tree a, .tree ul, .tree ul li {
   padding: 0;
   margin: 0;
-  font-size: 12px; }
+  font-size: 18px;
+  color: #252C28; }
 
-/*Now the CSS*/
-* {
-  margin: 0;
-  padding: 0; }
+.tree > ul {
+  width: 80%;
+  margin: 0 auto; }
 
 .tree ul {
   padding-top: 20px;
@@ -2850,13 +2868,13 @@ TREE
   position: absolute;
   top: 0;
   right: 50%;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #576760;
   width: 50%; }
 
 .tree li::after {
   right: auto;
   left: 50%;
-  border-left: 1px solid #ccc; }
+  border-left: 1px solid #576760; }
 
 /*We need to remove left-right connectors from elements without 
 any siblings*/
@@ -2874,7 +2892,7 @@ right connector from last child*/
 
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before {
-  border-right: 1px solid #ccc; }
+  border-right: 1px solid #576760; }
 
 /*Time to add downward connectors from parents*/
 .tree ul ul::before {
@@ -2882,37 +2900,32 @@ right connector from last child*/
   position: absolute;
   top: 0;
   left: 50%;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #576760;
   width: 0;
   height: 20px; }
 
 .tree li a {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
+  border: 1px solid #576760;
+  padding: 10px 20px;
+  margin: 0 10px;
   text-decoration: none;
-  color: #666;
-  font-family: arial, verdana, tahoma;
-  font-size: 11px;
   display: inline-block;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s; }
 
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
+/*hover effects*/
 .tree li a:hover, .tree li a:hover + ul li a {
-  background: #c8e4f8;
-  color: #000;
-  border: 1px solid #94a0b4; }
+  background: #468B40;
+  color: #fff;
+  border: 1px solid #576760; }
 
 /*Connector styles on hover*/
 .tree li a:hover + ul li::after,
 .tree li a:hover + ul li::before,
 .tree li a:hover + ul::before,
 .tree li a:hover + ul ul::before {
-  border-color: #94a0b4; }
+  border-color: #252C28; }
 
-/*Thats all. I hope you enjoyed it.
-Thanks :)*/
 /* Print styles
 -------------------------------------------------------------------------------*/
