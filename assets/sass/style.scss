@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../../node_modules/font-awesome/fonts/fontawesome-webfont.eot');
   src: url('../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('.../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -84,7 +84,7 @@ h2 {
 }
 h3 { 
   font-size: $h3;
-  line-height: $h3;
+  line-height: $h3-lineheight;
 }
 //h4 { font: $h4; }
 //h5 { font: $h5; }
@@ -113,7 +113,7 @@ a.button {
   line-height: 20px;
   color: black;
   text-decoration: none;
-  font-size: $h3;
+  font-size: $h4;
   font-family: $font-title;
   font-weight: bold;
   @include transition(all,0.2s,ease);
@@ -251,7 +251,8 @@ header {
     color: black;
     h1 {
       display: block;
-      line-height: 1.6em;
+      line-height: 4rem;
+      padding-bottom: $base-font*2;
     }
     h3 { 
       line-height: 1.2em;
@@ -288,7 +289,6 @@ header {
   background-size: cover;
   padding-bottom:120px;
   h2 {
-    font-size: 31px;
     padding-bottom: 10px;
   }
   ul {
@@ -305,7 +305,7 @@ header {
 
 /* Services
 -------------------------------------------------------------------------------*/
-.service_box {
+.three_box {
   float:left;
   width: 31%;
  //background: rgba( 255,255,255,0.9);

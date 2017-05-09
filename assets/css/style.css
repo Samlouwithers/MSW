@@ -2537,7 +2537,7 @@ input[type=button] {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot");
   src: url("../../node_modules/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../node_modules/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../node_modules/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url(".../../node_modules/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../node_modules/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
@@ -2614,28 +2614,28 @@ h6 {
   font-weight: bold; }
 
 h1 {
-  font-size: 4.236em;
-  line-height: 2.118em; }
+  font-size: 3rem;
+  line-height: 1.5rem; }
 
 h2 {
-  font-size: 2.618em;
+  font-size: 3rem;
   line-height: 2em; }
 
 h3 {
-  font-size: 1.618em;
-  line-height: 1.618em; }
+  font-size: 32px;
+  line-height: 63px; }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-family: Arial, sans-serif;
   color: #252C28;
-  line-height: 1.618em;
+  line-height: 32px;
   padding: 0 0 20px; }
 
 li {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-family: Arial, sans-serif;
-  line-height: 1.618em; }
+  line-height: 32px; }
 
 /* Buttons
 -------------------------------------------------------------------------------*/
@@ -2646,7 +2646,7 @@ a.button {
   line-height: 20px;
   color: black;
   text-decoration: none;
-  font-size: 1.618em;
+  font-size: 26px;
   font-family: "Open Sans Condensed", Arial, sans-serif;
   font-weight: bold;
   -moz-transition: all 0.2s ease;
@@ -2756,7 +2756,8 @@ header {
     color: black; }
     header .cover-text h1 {
       display: block;
-      line-height: 1.6em; }
+      line-height: 4rem;
+      padding-bottom: 24px; }
     header .cover-text h3 {
       line-height: 1.2em; }
     header .cover-text ul {
@@ -2781,7 +2782,6 @@ header {
   background-size: cover;
   padding-bottom: 120px; }
   #services h2 {
-    font-size: 31px;
     padding-bottom: 10px; }
   #services ul {
     list-style-type: disc;
@@ -2792,13 +2792,13 @@ header {
 
 /* Services
 -------------------------------------------------------------------------------*/
-.service_box {
+.three_box {
   float: left;
   width: 31%;
   padding: 0px 10px 10px 20px;
   border: 1px solid #576760;
   margin: 0 3% 0 0; }
-  .service_box:last-child {
+  .three_box:last-child {
     margin: 0; }
 
 /* People

@@ -1,22 +1,23 @@
 {
   "name": "snakeywedding",
   "version": "1.0.0",
-  "description": "snakes get married",
-  "main": "index.php",
+  "description": "MSW Finacial Partners",
+  "main": "index.html",
   "scripts": {
     "test": "test snake"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Samlouwithers/snakeyWedding.git"
+    "url": "git+https://github.com/Samlouwithers/MSW.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Samlouwithers/snakeyWedding/issues"
+    "url": "https://github.com/Samlouwithers/msw/issues"
   },
-  "homepage": "https://github.com/Samlouwithers/snakeyWedding#readme",
+  "homepage": "https://github.com/Samlouwithers/msw#readme",
   "devDependencies": {
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-livereload": "^3.8.1",
